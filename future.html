@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090714">
+
+<title>Our Future ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #080611;
+    color: white;
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+}
+
+.screen {
+    position: fixed;
+    inset: 0;
+    min-height: 100dvh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.screen.active {
+    display: flex;
+    animation: appear 1.1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 5;
+    width: min(92%, 650px);
+}
+
+h1,
+h2,
+.serif {
+    font-family: "Cormorant Garamond", serif;
+}
+
+h1 {
+    font-size: clamp(58px, 16vw, 110px);
+    line-height: .85;
+}
+
+h2 {
+    font-size: clamp(43px, 11vw, 75px);
+    line-height: .95;
+    margin-bottom: 22px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 15px;
+    opacity: .86;
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    opacity: .55;
+    margin-bottom: 22px;
+}
+
+button {
+    font-family: Poppins, sans-serif;
+    color: white;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50px;
+    padding: 13px 25px;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    transition: .3s;
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+.next {
+    margin-top: 32px;
+}
+
+.glow {
+    text-shadow:
+        0 0 15px rgba(255,150,200,.6),
+        0 0 45px rgba(255,100,170,.3);
+}
+
+.heart {
+    color: #ff91b9;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%,100% {
+        opacity: .15;
+        transform: scale(.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================
+   SCREEN 1
+========================= */
+
+#s1 {
+    background:
+        radial-gradient(circle at 50% 38%, #29204c, #0d0a1e 55%, #05040b);
+}
+
+.intro-heart {
+    font-size: 65px;
+    margin-bottom: 22px;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    15% { transform: scale(1.16); }
+    30% { transform: scale(1); }
+}
+
+.intro-sub {
+    margin-top: 28px;
+}
+
+
+/* =========================
+   SCREEN 2 HOME
+========================= */
+
+#s2 {
+    background:
+        linear-gradient(#111127, #1c172c 60%, #090812);
+}
+
+.house {
+    width: 230px;
+    height: 190px;
+    margin: 0 auto 25px;
+    position: relative;
+}
+
+.roof {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+    border-bottom: 82px solid #392a42;
+}
+
+.house-body {
+    position: absolute;
+    left: 18px;
+    bottom: 0;
+    width: 194px;
+    height: 130px;
+    background: linear-gradient(135deg,#76576c,#382d45);
+    border-radius: 6px;
+}
+
+.window {
+    position: absolute;
+    top: 40px;
+    width: 45px;
+    height: 50px;
+    background: #ffdba0;
+    border: 5px solid #4b3a4d;
+    box-shadow: 0 0 25px rgba(255,210,140,.45);
+}
+
+.window.left {
+    left: 27px;
+}
+
+.window.right {
+    right: 27px;
+}
+
+.door {
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    width: 45px;
+    height: 78px;
+    background: #29202f;
+}
+
+
+/* =========================
+   SCREEN 3 MORNING
+========================= */
+
+#s3 {
+    color: #241728;
+    background:
+        linear-gradient(#e5b0bd,#f4c9b7 50%,#a87b91);
+}
+
+.glass {
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+    padding: 32px 24px;
+    backdrop-filter: blur(15px);
+}
+
+.sun {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SCREEN 4
+========================= */
+
+#s4 {
+    background:
+        radial-gradient(circle at 50% 20%,#3a2637,#11121b 70%);
+}
+
+.food {
+    font-size: 80px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+#foodResult {
+    margin-top: 24px;
+    min-height: 75px;
+}
+
+
+/* =========================
+   SCREEN 5 RAIN
+========================= */
+
+#s5 {
+    background:
+        radial-gradient(circle at 70% 15%,#445173,#090b18 65%);
+}
+
+.rain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.drop {
+    position: absolute;
+    width: 1px;
+    height: 45px;
+    background: linear-gradient(transparent,rgba(190,220,255,.7));
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.promise {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(28px,7vw,47px);
+    line-height: 1.25;
+}
+
+
+/* =========================
+   SCREEN 6 TIMELINE
+========================= */
+
+#s6 {
+    background:
+        radial-gradient(circle at 50% 15%,#2c254c,#090814 70%);
+}
+
+.timeline {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step {
+    padding: 13px 18px;
+    border-radius: 15px;
+    text-align: left;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.1);
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: .7s;
+}
+
+.step.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================
+   SCREEN 7 TRAVEL
+========================= */
+
+#s7 {
+    background:
+        linear-gradient(135deg,#11182c,#271d3a);
+}
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 11px;
+    margin-top: 25px;
+}
+
+.travel {
+    padding: 22px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.travel span {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 6px;
+}
+
+#travelResult {
+    margin-top: 20px;
+    min-height: 65px;
+}
+
+
+/* =========================
+   SCREEN 8
+========================= */
+
+#s8 {
+    background:
+        radial-gradient(circle at 50% 35%,#402749,#0e0a18 70%);
+}
+
+.family {
+    font-size: 72px;
+    margin: 25px 0;
+}
+
+.family-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#familyResult {
+    margin-top: 20px;
+    min-height: 55px;
+}
+
+
+/* =========================
+   SCREEN 9 RING
+========================= */
+
+#s9 {
+    background:
+        radial-gradient(circle at 50% 45%,#191326,#05040a 70%);
+}
+
+.ring {
+    width: 115px;
+    height: 115px;
+    border: 7px solid #e4c49b;
+    border-radius: 50%;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 45px rgba(255,215,160,.2);
+    animation: ringFloat 3s infinite ease-in-out;
+}
+
+.ring:after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    background: #fff1c5;
+    transform: rotate(45deg);
+    top: -21px;
+    left: 36px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px #fff0ba;
+}
+
+@keyframes ringFloat {
+    0%,100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+
+/* =========================
+   SCREEN 10
+========================= */
+
+#s10 {
+    background:
+        radial-gradient(circle at 50% 50%,#391e38,#08060e 68%);
+}
+
+.final-heart {
+    font-size: 100px;
+    animation: heartbeat 2s infinite;
+    filter: drop-shadow(0 0 25px rgba(255,100,160,.5));
+}
+
+.final-name {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(65px,18vw,120px);
+    line-height: .9;
+    margin: 15px 0;
+}
+
+.signature {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 26px;
+    font-style: italic;
+    margin-top: 30px;
+    opacity: .85;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.music {
+    position: fixed;
+    z-index: 50;
+    right: 16px;
+    top: 16px;
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    display: none;
+}
+
+.back {
+    position: fixed;
+    z-index: 50;
+    left: 16px;
+    bottom: 16px;
+    padding: 9px 17px;
+    font-size: 11px;
+    display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    p {
+        font-size: 14px;
+    }
+
+    .house {
+        transform: scale(.83);
+        margin-bottom: 5px;
+    }
+
+    .glass {
+        padding: 25px 18px;
+    }
+
+    .travel {
+        padding: 18px 7px;
+        font-size: 13px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC FILE -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+<button class="back" id="backBtn" onclick="back()">← Back</button>
+
+
+<!-- =========================
+     1 — INTRO
+========================= -->
+
+<section class="screen active" id="s1">
+
+    <div class="stars" id="stars1"></div>
+
+    <div class="content">
+
+        <div class="intro-heart">♡</div>
+
+        <div class="label">
+            A little glimpse into tomorrow
+        </div>
+
+        <h1 class="glow">
+            Hey,<br>
+            babyboy...
+        </h1>
+
+        <p class="intro-sub">
+            Ready to see the life<br>
+            we're going to build?
+        </p>
+
+        <button class="next" onclick="next()">
+            ✨ Start Our Future
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     2 — HOME
+========================= -->
+
+<section class="screen" id="s2">
+
+    <div class="content">
+
+        <div class="label">
+            Chapter One
+        </div>
+
+        <div class="house">
+
+            <div class="roof"></div>
+
+            <div class="house-body">
+
+                <div class="window left"></div>
+                <div class="window right"></div>
+
+                <div class="door"></div>
+
+            </div>
+
+        </div>
+
+        <h2>Our First Home</h2>
+
+        <p>
+            It isn't a palace.<br>
+            It isn't expensive.
+        </p>
+
+        <p style="margin-top:15px;">
+            But it's ours.
+        </p>
+
+        <p style="margin-top:15px;">
+            Our first kitchen.<br>
+            Our first couch.<br>
+            Our first morning together.
+        </p>
+
+        <button class="next" onclick="next()">
+            🚪 Open the Door
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     3 — MORNING
+========================= -->
+
+<section class="screen" id="s3">
+
+    <div class="content">
+
+        <div class="label">
+            8:03 AM
+        </div>
+
+        <div class="glass">
+
+            <div class="sun">☀️</div>
+
+            <h2>Our Mornings</h2>
+
+            <p>
+                You wake up first.
+            </p>
+
+            <p>
+                I pretend I'm still sleeping.
+            </p>
+
+            <p>
+                You try to wake me up.
+            </p>
+
+            <p>
+                I steal the blanket.
+            </p>
+
+            <p>
+                You complain.
+            </p>
+
+            <p style="margin-top:15px;">
+                And somehow...
+            </p>
+
+            <p>
+                <b>this becomes our normal.</b>
+            </p>
+
+        </div>
+
+        <button class="next" onclick="next()">
+            ☀️ Continue
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     4 — LITTLE LIFE
+========================= -->
+
+<section class="screen" id="s4">
+
+    <div class="content">
+
+        <div class="label">
+            An ordinary day
+        </div>
+
+        <div class="food">🍳</div>
+
+        <h2>Our Little Life</h2>
+
+        <p>
+            What are we doing today?
+        </p>
+
+        <div class="choices">
+
+            <button onclick="foodChoice('cook')">
+                🍳 Cook together
+            </button>
+
+            <button onclick="foodChoice('burn')">
+                🔥 Burn the food
+            </button>
+
+            <button onclick="foodChoice('laugh')">
+                😂 Just laugh
+            </button>
+
+        </div>
+
+        <p id="foodResult"></p>
+
+        <button
+            class="next"
+            id="foodNext"
+            style="display:none;"
+            onclick="next()">
+
+            ❤️ Keep going
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     5 — BAD DAYS
+========================= -->
+
+<section class="screen" id="s5">
+
+    <div class="rain" id="rain"></div>
+
+    <div class="content">
+
+        <div class="label">
+            And then...
+        </div>
+
+        <div style="font-size:65px;">
+            🌧️
+        </div>
+
+        <div class="promise">
+
+            <p>
+                Not every day<br>
+                will be perfect.
+            </p>
+
+            <p style="margin-top:22px;">
+                We'll fight.<br>
+                We'll misunderstand each other.<br>
+                We'll cry.
+            </p>
+
+            <p style="margin-top:22px;">
+                But we'll learn.
+            </p>
+
+            <p>
+                We'll grow.
+            </p>
+
+            <p style="margin-top:22px;">
+                And we'll always...
+            </p>
+
+            <p class="heart glow">
+                choose each other.
+            </p>
+
+        </div>
+
+        <button class="next" onclick="next()">
+            🌙 Continue
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     6 — GROWING
+========================= -->
+
+<section class="screen" id="s6">
+
+    <div class="content">
+
+        <div class="label">
+            Our journey
+        </div>
+
+        <h2>Growing Together</h2>
+
+        <p>
+            We don't have to have everything figured out.
+        </p>
+
+        <div class="timeline">
+
+            <div class="step">
+                📚 <b>Learn</b><br>
+                We chase our dreams.
+            </div>
+
+            <div class="step">
+                💻 <b>Work</b><br>
+                We build our own lives.
+            </div>
+
+            <div class="step">
+                💰 <b>Save</b><br>
+                Little by little.
+            </div>
+
+            <div class="step">
+                🏠 <b>Build</b><br>
+                Something that belongs to us.
+            </div>
+
+            <div class="step">
+                ❤️ <b>Together</b><br>
+                Finally, no more distance.
+            </div>
+
+        </div>
+
+        <button class="next" onclick="next()">
+            ✨ Keep dreaming
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     7 — TRAVEL
+========================= -->
+
+<section class="screen" id="s7">
+
+    <div class="content">
+
+        <div class="label">
+            Places we'll go
+        </div>
+
+        <h2>Just You & Me</h2>
+
+        <p>
+            Pick somewhere we'd go together.
+        </p>
+
+        <div class="travel-grid">
+
+            <button class="travel" onclick="travel('Japan')">
+                <span>🇯🇵</span>
+                Japan
+            </button>
+
+            <button class="travel" onclick="travel('Beach')">
+                <span>🏝️</span>
+                The Beach
+            </button>
+
+            <button class="travel" onclick="travel('Mountains')">
+                <span>🏔️</span>
+                Mountains
+            </button>
+
+            <button class="travel" onclick="travel('Anywhere')">
+                <span>🌎</span>
+                Anywhere
+            </button>
+
+        </div>
+
+        <p id="travelResult"></p>
+
+        <button
+            class="next"
+            id="travelNext"
+            style="display:none;"
+            onclick="next()">
+
+            ✈️ Next
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     8 — FAMILY
+========================= -->
+
+<section class="screen" id="s8">
+
+    <div class="content">
+
+        <div class="label">
+            One day...
+        </div>
+
+        <h2>Our Little Family</h2>
+
+        <p>
+            Maybe it'll just be us.
+        </p>
+
+        <p>
+            Maybe we'll have a tiny troublemaker.
+        </p>
+
+        <div class="family">
+            🧑🏻‍🤝‍🧑🏻
+        </div>
+
+        <div class="family-buttons">
+
+            <button onclick="family('cat')">
+                🐱 A cat
+            </button>
+
+            <button onclick="family('dog')">
+                🐶 A dog
+            </button>
+
+            <button onclick="family('both')">
+                🐱 + 🐶 Both
+            </button>
+
+        </div>
+
+        <p id="familyResult"></p>
+
+        <button
+            class="next"
+            id="familyNext"
+            style="display:none;"
+            onclick="next()">
+
+            ❤️ There's more
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     9 — FOREVER
+========================= -->
+
+<section class="screen" id="s9">
+
+    <div class="stars" id="stars9"></div>
+
+    <div class="content">
+
+        <div class="label">
+            Years from now
+        </div>
+
+        <p style="font-size:18px;">
+            After everything...
+        </p>
+
+        <div class="ring"></div>
+
+        <p class="serif" style="font-size:30px;">
+            I'd still choose you.
+        </p>
+
+        <p style="margin-top:18px;">
+            Again.
+        </p>
+
+        <p>
+            Again.
+        </p>
+
+        <p>
+            And again.
+        </p>
+
+        <button class="next" onclick="next()">
+            💍 Forever
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     10 — FINAL
+========================= -->
+
+<section class="screen" id="s10">
+
+    <div class="stars" id="stars10"></div>
+
+    <div class="content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <div class="label">
+            If I could see my future...
+        </div>
+
+        <p class="serif" style="font-size:32px;">
+            I'd look for you.
+        </p>
+
+        <div class="final-name glow">
+            Daksh
+        </div>
+
+        <p>
+            And somehow...
+        </p>
+
+        <p>
+            I think I'd find you.
+        </p>
+
+        <div class="signature">
+            Happy Birthday, my love.
+        </div>
+
+        <p style="margin-top:28px;font-size:13px;opacity:.55;">
+            I can't wait until this website<br>
+            becomes our reality.
+        </p>
+
+        <button class="next" onclick="restart()">
+            ♾️ Start Again
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   SCREEN SYSTEM
+========================= */
+
+let current = 1;
+const total = 10;
+
+function show(number) {
+
+    document.querySelectorAll(".screen")
+        .forEach(s => s.classList.remove("active"));
+
+    document.getElementById("s" + number)
+        .classList.add("active");
+
+    current = number;
+
+    document.getElementById("musicBtn")
+        .style.display = number === 1 ? "none" : "block";
+
+    document.getElementById("backBtn")
+        .style.display = number === 1 ? "none" : "block";
+
+    if (number === 6) {
+        animateTimeline();
+    }
+}
+
+function next() {
+
+    if (current < total) {
+        show(current + 1);
+    }
+}
+
+function back() {
+
+    if (current > 1) {
+        show(current - 1);
+    }
+}
+
+function restart() {
+    show(1);
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+function stars(id, amount) {
+
+    const box = document.getElementById(id);
+
+    for (let i = 0; i < amount; i++) {
+
+        const star = document.createElement("div");
+
+        star.className = "star";
+
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDuration =
+            (2 + Math.random() * 4) + "s";
+
+        star.style.animationDelay =
+            Math.random() * 4 + "s";
+
+        box.appendChild(star);
+    }
+}
+
+stars("stars1",90);
+stars("stars9",90);
+stars("stars10",100);
+
+
+/* =========================
+   RAIN
+========================= */
+
+function makeRain() {
+
+    const rain =
+        document.getElementById("rain");
+
+    for (let i = 0; i < 70; i++) {
+
+        const drop =
+            document.createElement("div");
+
+        drop.className = "drop";
+
+        drop.style.left =
+            Math.random() * 100 + "%";
+
+        drop.style.animationDuration =
+            (.4 + Math.random() * .8) + "s";
+
+        drop.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        rain.appendChild(drop);
+    }
+}
+
+makeRain();
+
+
+/* =========================
+   FOOD
+========================= */
+
+function foodChoice(choice) {
+
+    const result =
+        document.getElementById("foodResult");
+
+    if (choice === "cook") {
+
+        result.innerHTML =
+            "We cook together... 🍳<br><br>" +
+            "You steal a taste.<br>" +
+            "I pretend to be annoyed.<br><br>" +
+            "And somehow the food tastes better because you're here.";
+
+    }
+
+    if (choice === "burn") {
+
+        result.innerHTML =
+            "The food is completely ruined. 😭<br><br>" +
+            "We blame each other.<br>" +
+            "Then we order food instead.<br><br>" +
+            "Perfect dinner.";
+
+    }
+
+    if (choice === "laugh") {
+
+        result.innerHTML =
+            "We forget about cooking entirely. 😂<br><br>" +
+            "We're laughing too much.<br><br>" +
+            "Honestly... I'd take this over a perfect dinner.";
+
+    }
+
+    document.getElementById("foodNext")
+        .style.display = "inline-block";
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+function animateTimeline() {
+
+    document.querySelectorAll(".step")
+        .forEach((item,index) => {
+
+            item.classList.remove("show");
+
+            setTimeout(() => {
+                item.classList.add("show");
+            }, index * 450);
+
+        });
+}
+
+
+/* =========================
+   TRAVEL
+========================= */
+
+function travel(place) {
+
+    const result =
+        document.getElementById("travelResult");
+
+    const messages = {
+
+        Japan:
+        "Little streets at night, too many pictures, amazing food, and you beside me. 🇯🇵",
+
+        Beach:
+        "Barefoot. Sunset. Waves. Your hand in mine. That's enough. 🌊",
+
+        Mountains:
+        "Cold air, warm clothes, messy hair, and you holding my hand. 🏔️",
+
+        Anywhere:
+        "Honestly? I don't care where we go... as long as I get to go there with you. 🌎"
+
+    };
+
+    result.innerHTML = messages[place];
+
+    document.getElementById("travelNext")
+        .style.display = "inline-block";
+}
+
+
+/* =========================
+   FAMILY
+========================= */
+
+function family(choice) {
+
+    const result =
+        document.getElementById("familyResult");
+
+    if (choice === "cat") {
+
+        result.innerHTML =
+            "A tiny cat that somehow gets more attention than both of us. 🐱";
+
+    }
+
+    if (choice === "dog") {
+
+        result.innerHTML =
+            "A tiny dog running around our home while we try to keep up. 🐶";
+
+    }
+
+    if (choice === "both") {
+
+        result.innerHTML =
+            "Two little troublemakers... because apparently one wasn't enough. 😭🐱🐶";
+
+    }
+
+    document.getElementById("familyNext")
+        .style.display = "inline-block";
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+let playing = false;
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+    const btn =
+        document.getElementById("musicBtn");
+
+    if (!playing) {
+
+        music.play()
+        .then(() => {
+
+            playing = true;
+            btn.innerHTML = "🔊";
+
+        })
+        .catch(() => {
+
+            alert(
+                "Put your music file in the same folder and name it music.mp3 ❤️"
+            );
+
+        });
+
+    } else {
+
+        music.pause();
+
+        playing = false;
+
+        btn.innerHTML = "🎵";
+    }
+}
+
+</script>
+
+</body>
+</html>
